@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     public Transform groundCheck;     // Transform to check if the player is on the ground
     public LayerMask groundLayer;     // Ground layer mask for ground detection
 
+    public bool isTeleporting = false;  // Flag to prevent re-teleportation
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
