@@ -42,6 +42,12 @@ public class PortalTeleporter : MonoBehaviour
 
         // Teleport the object to the teleport destination
         collision.transform.position = teleportDestination.position;
+
+        // Reset the object's velocity if it has a Rigidbody2D
+        if (collision.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb))
+        {
+            rb.velocity = Vector2.zero;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
