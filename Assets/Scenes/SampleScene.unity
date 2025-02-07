@@ -2384,7 +2384,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 1861438651}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 4a8395cb6c293614099220c7dab3a9e3, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -2425,7 +2425,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 6
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -2518,7 +2518,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
-  jumpPower: 16
+  jumpPower: 9.75
   rb: {fileID: 1861438653}
   groundCheck: {fileID: 202775996}
   groundLayer:
