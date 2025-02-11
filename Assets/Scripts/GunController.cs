@@ -21,9 +21,14 @@ public class GunController : MonoBehaviour
     // A fixed maximum distance for dynamic aiming (adjust as needed)
     public float dynamicAimMaxDistance = 100f;
 
+    // public GameObject playerObj;
+    // private PlayerController playerScript; 
+
     void Start()
     {
         // Use the assigned LineRenderer or get it from this GameObject.
+        // playerScript = playerObj.GetComponent<PlayerController>();
+        // Debug.Log(playerScript.isFacingRightFunc()); 
         if (trajectoryLine == null)
         {
             trajectoryLine = GetComponent<LineRenderer>();
@@ -37,8 +42,7 @@ public class GunController : MonoBehaviour
 
         // Configure the LineRenderer (adjust settings as needed).
         trajectoryLine.material = new Material(Shader.Find("Sprites/Default"));
-        trajectoryLine.startColor = Color.red;
-        trajectoryLine.endColor = Color.red;
+        
         trajectoryLine.startWidth = 0.1f;
         trajectoryLine.endWidth = 0.1f;
         trajectoryLine.sortingLayerName = "Default"; // Ensure this layer is visible in your camera's culling mask.
@@ -50,6 +54,13 @@ public class GunController : MonoBehaviour
         // Only allow mouse click actions when the G key is held.
         if (Input.GetKey(KeyCode.G))
         {
+            if(capturedObject == null){
+                trajectoryLine.startColor = Color.red;
+                trajectoryLine.endColor = Color.red;
+            } else {
+                trajectoryLine.startColor = Color.green;
+                trajectoryLine.endColor = Color.green;
+            }
             // Right mouse button held: dynamic aiming.
             if (Input.GetMouseButton(1))
             {
@@ -143,6 +154,8 @@ public class GunController : MonoBehaviour
             endPos.z = 0f;
         }
 
+        // if()
+
         // Optionally, if you prefer the endpoint to exactly match the mouse position when nothing is hit,
         // you can uncomment the following line:
         // else { endPos = mouseWorldPos; }
@@ -150,6 +163,7 @@ public class GunController : MonoBehaviour
         trajectoryLine.positionCount = 2;
         trajectoryLine.SetPosition(0, startPos);
         trajectoryLine.SetPosition(1, endPos);
+        DrawTrajectory();
     }
 
     /// Attempts to capture an object (with tag "Box") in the direction the gun is pointing.
