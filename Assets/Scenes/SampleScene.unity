@@ -287,6 +287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a283fcc7ed1e248f59d96bfa2990ce2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isReverseDirection: 0
   teleportDestination: {fileID: 632950492}
 --- !u!212 &115324642
 SpriteRenderer:
@@ -1027,6 +1028,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a283fcc7ed1e248f59d96bfa2990ce2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isReverseDirection: 0
   teleportDestination: {fileID: 115324643}
 --- !u!212 &632950495
 SpriteRenderer:
@@ -1411,6 +1413,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a283fcc7ed1e248f59d96bfa2990ce2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isReverseDirection: 1
   teleportDestination: {fileID: 2025895846}
 --- !u!212 &990295577
 SpriteRenderer:
@@ -1452,7 +1455,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_Sprite: {fileID: 2747690628134850419, guid: b670ab75dde984907b8570040daa08c5, type: 3}
   m_Color: {r: 0.043137252, g: 0.7306159, b: 1, a: 1}
   m_FlipX: 0
@@ -1783,7 +1786,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!61 &1470388454
 BoxCollider2D:
@@ -1941,7 +1944,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!61 &1528457093
 BoxCollider2D:
@@ -2243,7 +2246,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!61 &1662961119
 BoxCollider2D:
@@ -2405,12 +2408,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletSpeed: 10
   captureRange: 20
-  trajectoryPoints: 30
-  timeStep: 0.1
   trajectoryLine: {fileID: 0}
   dynamicAimMaxDistance: 100
+  aimArrowLength: 1
   releaseOffset: 1
   releaseForce: 5
+  bulletPrefab: {fileID: 8589349314664127233, guid: c6981d5a214d49e41bff80411996523d, type: 3}
 --- !u!120 &1798903974
 LineRenderer:
   serializedVersion: 2
@@ -2998,6 +3001,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a283fcc7ed1e248f59d96bfa2990ce2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isReverseDirection: 1
   teleportDestination: {fileID: 990295578}
 --- !u!212 &2025895849
 SpriteRenderer:
@@ -3039,7 +3043,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_Sprite: {fileID: 2747690628134850419, guid: b670ab75dde984907b8570040daa08c5, type: 3}
   m_Color: {r: 0.043137252, g: 0.7306159, b: 1, a: 1}
   m_FlipX: 0
