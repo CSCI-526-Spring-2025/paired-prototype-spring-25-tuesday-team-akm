@@ -2586,7 +2586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baab9d3300a61834fbf6013e00593c07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: 10
+  bulletSpeed: 15
   captureRange: 20
   trajectoryLine: {fileID: 0}
   dynamicAimMaxDistance: 100
